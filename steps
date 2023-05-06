@@ -1,0 +1,98 @@
+# create django project
+
+django-admin startproject iti
+
+### create application inside the project
+cd iti
+python manage.py startapp students
+
+### go to students folder
+create file --> url.py
+
+## goto iti folder
+include students.urls in this file
+
+
+### add created application to the settings.py
+
+open students/apps.py
+copy class name
+got installed_apps list
+
+'students.apps.classname'
+
+
+---> create template folder
+in students
+create folder templates
+inside it create students --> this were we put our templates
+
+
+##############################################################
+
+### configure database steps
+
+mysql
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "devops43",
+        "USER": "devops43",
+        "PASSWORD": "Iti123456789_",
+        "HOST": "localhost",
+        "PORT": "3306",
+    }
+}
+
+
+
+https://pypi.org/project/mysqlclient/
+
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+
+pip install mysqlclient
+
+
+################# models and migrations
+
+open model.py --> wirte structrue of the table inform of class
+
+
+python manage.py makemigrations
+
+    --> django --> scan models files in the installed apps ===> scan for changes
+    ---> if changes detected ---> create migration file reflect this change
+
+
+python manage.py migrate
+    --> migrate changes --> to the database
+    apply these changes
+
+
+
+## crud operation
+
+python manage.py createsuperuser
+
+
+pip install -r requirements.txt
+
+
+
+
+######333 lab install django
+
+## create website for valeo
+employees ===> name, id , email , salary , created_at ,updated_at
+
+create model
+add model to the admin dashboard
+
+## list all employees
+
+
+
+
+
+
